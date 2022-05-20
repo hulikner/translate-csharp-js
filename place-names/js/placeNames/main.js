@@ -1,12 +1,21 @@
-// Put your code here
 
-const names = [
-   "Nashville", "Hong Kong", "The back yard", "Earth",
-    "London", "The mall", "Ryman Auditorium", "The Great Wall of China"
-];
+// We must specify the Type of the "names" variable.
+//  It is a "List" that can only contain "strings".
+const names = ["Nashville", "Hong Kong", "The back yard", "Earth", "London", "The mall", "Ryman Auditorium", "The Great Wall of China"];
 
-console.log("All Pace Names");
+// Print some output to the terminal (aka. "Console");
+console.log("All Place Names");
 
-for (const name of names) {
-  console.log(name);
-}
+// Iterate over each "name" in the "names" list
+names.forEach(name => console.log(name));
+
+// When you don't pass an argument to WriteLine, it simply outputs a blank line.
+//  Here we use that to add a little space around the output.
+console.log();
+
+// Filter the list to create a new list that only has 
+//  place names that start with the word "The".
+const theNames = names.filter(name => name.startsWith("The"))
+console.log("'The' Place Names");
+
+theNames.forEach(name => console.log(name));
